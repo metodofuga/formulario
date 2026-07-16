@@ -89,6 +89,160 @@
     @keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-10px) rotate(2deg)}}
     @media (max-width: 950px){.hero-grid,.section-head,.cta{grid-template-columns:1fr}.playground{min-height:520px}.hero-card{inset:72px 24px 76px 24px}}
     @media (max-width: 620px){.wrap{padding:0 18px}.card-mini-grid{grid-template-columns:1fr}.playground{min-height:500px}.hero-card{padding:22px;border-radius:32px}.actions{flex-direction:column;align-items:stretch}.btn{width:100%}h1{max-width:9.2ch}.hero-sub{font-size:17px}}
+  @media (max-width: 900px){
+  .hero,
+  .intro,
+  .content,
+  .section,
+  .form-section,
+  .container,
+  .wrapper{
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .field-grid,
+  .form-grid,
+  .two-columns,
+  .content-grid{
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  h1{
+    font-size: 40px !important;
+    line-height: 1.1 !important;
+  }
+
+  h2{
+    font-size: 28px !important;
+    line-height: 1.2 !important;
+  }
+
+  p,
+  li,
+  label,
+  input,
+  textarea,
+  button{
+    font-size: 16px !important;
+  }
+
+  .form-card,
+  .info-card,
+  .card{
+    padding: 24px !important;
+    border-radius: 20px !important;
+  }
+}
+
+@media (max-width: 640px){
+  body{
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  .hero,
+  .intro,
+  .content,
+  .section,
+  .form-section,
+  .container,
+  .wrapper{
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .hero{
+    padding-top: 32px !important;
+    padding-bottom: 20px !important;
+  }
+
+  h1{
+    font-size: 32px !important;
+    line-height: 1.08 !important;
+    letter-spacing: -0.02em;
+  }
+
+  h2{
+    font-size: 24px !important;
+    line-height: 1.15 !important;
+  }
+
+  p{
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+  }
+
+  .form-card,
+  .info-card,
+  .card{
+    padding: 18px !important;
+    border-radius: 18px !important;
+  }
+
+  .field{
+    gap: 6px !important;
+  }
+
+  .field label{
+    font-size: 14px !important;
+  }
+
+  .field input,
+  .field textarea{
+    padding: 14px 14px !important;
+    font-size: 16px !important;
+    border-radius: 14px !important;
+  }
+
+  .field textarea{
+    min-height: 120px !important;
+  }
+
+  .btn-submit,
+  .btn-primary,
+  button[type="submit"],
+  a.btn-primary{
+    width: 100% !important;
+    display: inline-flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 15px 18px !important;
+    font-size: 15px !important;
+    border-radius: 999px !important;
+  }
+
+  .success-message{
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+  }
+
+  br{
+    display: none;
+  }
+}
+
+@media (max-width: 420px){
+  h1{
+    font-size: 28px !important;
+  }
+
+  h2{
+    font-size: 22px !important;
+  }
+
+  .form-card,
+  .info-card,
+  .card{
+    padding: 16px !important;
+  }
+
+  .field input,
+  .field textarea{
+    padding: 13px 12px !important;
+  }
+}
   </style>
 </head>
 <body>
