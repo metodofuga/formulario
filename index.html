@@ -89,160 +89,331 @@
     @keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-10px) rotate(2deg)}}
     @media (max-width: 950px){.hero-grid,.section-head,.cta{grid-template-columns:1fr}.playground{min-height:520px}.hero-card{inset:72px 24px 76px 24px}}
     @media (max-width: 620px){.wrap{padding:0 18px}.card-mini-grid{grid-template-columns:1fr}.playground{min-height:500px}.hero-card{padding:22px;border-radius:32px}.actions{flex-direction:column;align-items:stretch}.btn{width:100%}h1{max-width:9.2ch}.hero-sub{font-size:17px}}
-  @media (max-width: 900px){
+  html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+svg,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+input,
+textarea,
+button,
+select {
+  font: inherit;
+  max-width: 100%;
+}
+
+textarea {
+  resize: vertical;
+}
+
+@media (max-width: 900px) {
   .hero,
+  .hero-content,
+  .hero-grid,
+  .intro-grid,
+  .content-grid,
+  .form-grid,
+  .field-grid,
+  .two-columns,
+  .split,
+  .columns,
+  .grid,
+  .layout,
+  .section-grid,
+  .form-layout,
+  .info-layout {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .container,
+  .wrapper,
+  .section,
+  .hero,
+  .hero-content,
   .intro,
   .content,
-  .section,
   .form-section,
-  .container,
-  .wrapper{
+  .info-section,
+  main,
+  section {
+    width: 100% !important;
+    max-width: 100% !important;
     padding-left: 20px !important;
     padding-right: 20px !important;
   }
 
-  .field-grid,
-  .form-grid,
-  .two-columns,
-  .content-grid{
-    grid-template-columns: 1fr !important;
-    gap: 14px !important;
-  }
-
-  h1{
-    font-size: 40px !important;
-    line-height: 1.1 !important;
-  }
-
-  h2{
-    font-size: 28px !important;
-    line-height: 1.2 !important;
-  }
-
-  p,
-  li,
-  label,
-  input,
-  textarea,
-  button{
-    font-size: 16px !important;
-  }
-
-  .form-card,
+  .hero-card,
   .info-card,
-  .card{
-    padding: 24px !important;
-    border-radius: 20px !important;
-  }
-}
-
-@media (max-width: 640px){
-  body{
-    font-size: 16px;
-    line-height: 1.55;
-  }
-
-  .hero,
-  .intro,
-  .content,
-  .section,
-  .form-section,
-  .container,
-  .wrapper{
-    padding-left: 16px !important;
-    padding-right: 16px !important;
-  }
-
-  .hero{
-    padding-top: 32px !important;
-    padding-bottom: 20px !important;
+  .form-card,
+  .floating-card,
+  .overlay-card,
+  .badge-box,
+  .text-box,
+  .box,
+  .card,
+  .panel,
+  .note,
+  .summary,
+  .form-wrapper,
+  .info-wrapper {
+    position: relative !important;
+    inset: auto !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
-  h1{
-    font-size: 32px !important;
+  h1, h2, h3, p, li, label {
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+
+  h1 {
+    font-size: 38px !important;
     line-height: 1.08 !important;
-    letter-spacing: -0.02em;
   }
 
-  h2{
-    font-size: 24px !important;
+  h2 {
+    font-size: 28px !important;
     line-height: 1.15 !important;
   }
 
-  p{
+  p, li {
     font-size: 16px !important;
     line-height: 1.6 !important;
   }
 
   .form-card,
   .info-card,
-  .card{
-    padding: 18px !important;
-    border-radius: 18px !important;
+  .card,
+  .panel {
+    padding: 22px !important;
+    border-radius: 20px !important;
   }
 
-  .field{
-    gap: 6px !important;
-  }
-
-  .field label{
-    font-size: 14px !important;
+  .field,
+  .form-group {
+    width: 100% !important;
+    margin-bottom: 14px !important;
   }
 
   .field input,
-  .field textarea{
+  .field textarea,
+  .form-group input,
+  .form-group textarea,
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
     padding: 14px 14px !important;
     font-size: 16px !important;
+    line-height: 1.5 !important;
     border-radius: 14px !important;
   }
 
-  .field textarea{
+  textarea {
     min-height: 120px !important;
   }
 
-  .btn-submit,
   .btn-primary,
-  button[type="submit"],
-  a.btn-primary{
+  .btn-submit,
+  .cta-button,
+  button,
+  a.button,
+  a.btn-primary {
     width: 100% !important;
-    display: inline-flex !important;
+    max-width: 100% !important;
+    display: flex !important;
     justify-content: center !important;
     align-items: center !important;
     padding: 15px 18px !important;
     font-size: 15px !important;
-    border-radius: 999px !important;
-  }
-
-  .success-message{
-    font-size: 14px !important;
-    line-height: 1.5 !important;
-  }
-
-  br{
-    display: none;
+    line-height: 1.2 !important;
+    text-align: center !important;
   }
 }
 
-@media (max-width: 420px){
-  h1{
-    font-size: 28px !important;
+@media (max-width: 640px) {
+  body {
+    overflow-x: hidden !important;
   }
 
-  h2{
-    font-size: 22px !important;
+  .container,
+  .wrapper,
+  .section,
+  .hero,
+  .hero-content,
+  .intro,
+  .content,
+  .form-section,
+  .info-section,
+  main,
+  section {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .hero {
+    padding-top: 28px !important;
+    padding-bottom: 20px !important;
+  }
+
+  .hero,
+  .hero-content,
+  .card,
+  .form-card,
+  .info-card,
+  .panel,
+  .box,
+  .text-box {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  .hero-card,
+  .info-card,
+  .form-card,
+  .floating-card,
+  .overlay-card,
+  .badge-box,
+  .text-box,
+  .box,
+  .card,
+  .panel,
+  .note,
+  .summary {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  h1 {
+    font-size: 30px !important;
+    line-height: 1.08 !important;
+    letter-spacing: -0.02em !important;
+  }
+
+  h2 {
+    font-size: 23px !important;
+    line-height: 1.15 !important;
+  }
+
+  h3 {
+    font-size: 18px !important;
+    line-height: 1.25 !important;
+  }
+
+  p,
+  li,
+  label {
+    font-size: 15px !important;
+    line-height: 1.58 !important;
   }
 
   .form-card,
   .info-card,
-  .card{
+  .card,
+  .panel {
+    padding: 18px !important;
+    border-radius: 18px !important;
+  }
+
+  .field-grid,
+  .form-grid,
+  .two-columns,
+  .split,
+  .columns,
+  .grid,
+  .layout,
+  .section-grid,
+  .hero-grid,
+  .intro-grid,
+  .content-grid,
+  .form-layout,
+  .info-layout {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  [style*="position: absolute"],
+  [style*="position:absolute"] {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+  }
+
+  [style*="width: 50%"],
+  [style*="width:50%"],
+  [style*="width: 48%"],
+  [style*="width:48%"],
+  [style*="width: 45%"],
+  [style*="width:45%"] {
+    width: 100% !important;
+  }
+
+  br {
+    display: none !important;
+  }
+}
+
+@media (max-width: 420px) {
+  h1 {
+    font-size: 27px !important;
+  }
+
+  h2 {
+    font-size: 21px !important;
+  }
+
+  .form-card,
+  .info-card,
+  .card,
+  .panel {
     padding: 16px !important;
   }
 
   .field input,
-  .field textarea{
+  .field textarea,
+  .form-group input,
+  .form-group textarea,
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
     padding: 13px 12px !important;
   }
 }
+</style>
   </style>
 </head>
 <body>
